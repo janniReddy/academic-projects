@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="stylingsheet1.css"/> 
+ </head>
+
+ <body>
+   <center><div id="main">
+  <div id="d1" style="width:715px;height:190px;">
+  <img src="1.jpg" id="img"/>
+  <h1>ALL INDIA BLOOD BANK MANAGEMENT</h1>
+  <h2>for the people, by the people    ph.no:8099974379</h2>
+  </div>
+  <center> <div id="d2" style="width:722px;">
+  <h3 class="t1">Need Blood</h3>
+</center>
+<center><div id="d3" style="width:700px;">
+<form id="donarform" action="http://localhost:4649/bloodmanagement/searchdonar.jsp" method="get">
+<div id="f2">
+				<fieldset>
+				<label>
+					<span>Blood Group: (required)</span>
+					
+					<select name="blood_group" id="needblood_group" onfocus="getval()">
+						<option value="">Please select your blood group</option>	
+																			
+					</select>
+					</fieldset>
+				</label>
+				<script>
+				function getval(){
+					//alert("nani");
+					var xmlh=false;
+					if(window.XMLHttpRequest){
+						xmlh=new XMLHttpRequest();
+					}
+					if(xmlh!=false)
+						{
+						xmlh.open("GET","Contact1.jsp?",true);
+					//	document.write("wner");
+						xmlh.onreadystatechange=function(){
+							if(xmlh.readyState==4&&xmlh.status==200)
+								{
+								var p=xmlh.responseText;
+								var combo=document.getElementById("needblood_group");
+								var tiarr=p.split(",");
+								for(var i=0;i<tiarr.length;i++)
+									{
+									if(tiarr[i]!=null&&tiarr[i]!="")
+										{
+										var option=document.createElement("option");
+										option.text=tiarr[i];
+										option.value=tiarr[i];
+										try{
+											combo.add(option,null);
+										}catch(error){
+											combo.add(option);
+										}
+										}
+									}
+								}
+						};
+						}
+						xmlh.send();
+				}
+				</script>
+			</div></br>
+<div>
+				<button name="submit" type="submit" value="" id="contact-submit">submit</button>
+			</div>
+			
+			<br>
+			</form>
+
+</div></center>
+</div></center>
+ </body>
+</html>

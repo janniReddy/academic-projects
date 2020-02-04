@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+ <style type="text/css">
+  span.text-content {
+  background: rgba(0,0,0,0.5);
+  background-color:red;
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 250px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 190px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  text-align: center;
+}
+ 
+ul.img-list li {
+  display: inline-block;
+  height: 150px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 150px;
+}
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ 
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+}
+ </style>
+ <link rel="stylesheet" type="text/css" href="stylingsheet.css"/>
+ </head>
+
+ <body  link="white">
+  <div id="main">
+  <img src="1.jpg" id="img"/>
+  <h1>ALL INDIA BLOOD BANK MANAGEMENT</h1>
+  <h2>for the people, by the people, ph.no:8099974379</h2>
+  </div>
+  <div id="j1">
+  <ol type=1>
+  <a href="donarregistration.html" title="want to donate blood">
+  <li>Register as blood donar</li>
+  </a></br>
+  <a href="needblood.html" title="Search For Donar">
+  <li>Need blood</li></a></br>
+  <a href="postforblood.html" title="post for blood in emergency block">
+  <li>Post for emergency blood</li></a></br>
+  <a href="registerforcamps.html" title="Register for blood donation camps">
+  <li>Registration for blood donation camps</li></a></br>
+  <a href="nearestbloodbank.html" title="Search For Nearest Blood Banks">
+  <li>Nearest blood banks</li></a></br>
+   <a href="bloodavailability.html" title="Check Availability Of Blood In Banks">
+  <li>Blood banks status</li></a></br>
+  <a href="http://localhost:4649/bloodmanagement/banksavailable.jsp" title="Blood Banks">
+  <li>Blood banks available</li></a></br>
+  <a href="http://localhost:4649/bloodmanagement/campsavailable.jsp" title="Blood Donation Camps">
+  <li>Blood donation camps</li></a></br>
+  <a href="http://localhost:4649/bloodmanagement/contactus.jsp" title="Leave Your Suggessions">
+  <li>Contact us</li></a></br>
+  </ol>
+  </div>
+  <div id="j2">
+  <h2>Donar Login</h2>
+  
+ <form id="loginform" method="get" action="http://localhost:4649/bloodmanagement/Login1">
+ <h3><span id="invalid1"></span></h3>
+  <table>
+  <tr>
+  <td> Name </td><td> <input type="text" name="text_name" required></input>
+  </td></tr>
+ <tr> <td>password</td><td><input type="password" name="password" required></input>
+  </td></tr><br>
+  <tr> <td> <input type="submit" value="submit"></input></td> </tr>
+  </table>
+  </form>
+  </div>
+<div id="j3" style="width:790px;height:30px">
+<marquee behavior="alternate" id="m" onMouseOver="document.getElementById('m').stop();" onMouseOut="document.getElementById('m').start();"><span id="bneed"><blink><a href="emergency.jsp">emergency blood needed</a></blink></span></marquee>
+</div>
+<div id="j4">
+<h2>Admin Login</h2>
+  
+ <form id="loginform" method="get" action="http://localhost:4649/bloodmanagement/Login7">
+ <h3><span id="invalid7"></span></h3>
+  <table>
+  <tr>
+  <td> LoginId </td><td> <input type="text" name="textt_name" required></input>
+  </td></tr>
+ <tr> <td>password</td><td><input type="password" name="ppassword" required></input>
+  </td></tr><br>
+  <tr> <td> <input type="submit" value="submit"></input></td> </tr>
+  </table>
+  </form>
+</div>
+<div id="j5">
+<marquee behaviour="scroll" direction="left" id="img1" onMouseOver="document.getElementById('img1').stop();"
+onMouseOut="document.getElementById('img1').start();">
+<ul class="img-list">
+<li>
+<img src="c1.jpg" width="200px" height="250px"/>
+<span class="text-content"><span>Blood Donation Camp</br>Jangaon</br>Warangal</span></span>
+</li>
+<li>
+<img src="c2.jpg" width="200px" height="250px"/>
+<span class="text-content"><span>Blood Donation Camp</br>Nizambad</br>Telangana</span></span></li>
+<li>
+<img src="c3.jpg" width="200px" height="250px"/>
+<span class="text-content"><span>Blood Donation Camp</br>Hyderabad</br>Narayanaguda</br>Kmit</span></span></li>
+
+
+</ul> 
+</marquee>
+</div>
+<div  id="j6" >
+     <p style="font-family: Verdana, KabelItcTEE, +Optima, Arial, Monospace, Ottawa, 'Palatino Linotype'; font-size :smaller ; font-style :italic ;">
+     Please give your valuable suggestions to <a href="contactus.aspx" >jannireddyk@gmail.com</a></p>
+   
+	</div>
+ </body>
+</html>
